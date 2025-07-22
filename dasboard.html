@@ -2,26 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - What's Next?</title>
-  <link rel="stylesheet" href="/style/login.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style/dashboard.css" />
 </head>
 <body>
   <div class="container">
-    <div class="login-box">
-      <h1>Welcome to What’s Next?</h1>
-      <p class="subtext">Please login to continue.</p>
+    <div class="dashboard">
+      <!-- Left Panel: To-Do List -->
+      <div class="sidebar">
+        <div class="date-time">Tue 1 July 2025 &nbsp; 7:43 AM</div>
+        <h2>📘 To-Do Lists</h2>
+        <ul class="todo-list">
+          <li><span>Meeting Sagar Dhakal</span><span class="priority medium">Medium</span></li>
+          <li><span>Visiting Hunting Reserve with 5:55</span><span class="priority medium">Medium</span></li>
+          <li><span>Going on a drive with Saurabh Jyoti</span><span class="priority medium">Medium</span></li>
+          <li><span>Go golfing with Prachanda</span><span class="priority medium">Medium</span></li>
+          <li><span>Ranting with Sher Bahadur Deuba</span><span class="priority medium">Medium</span></li>
+        </ul>
+      </div>
 
-      <form>
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Enter your username" />
+      <!-- Center Panel: Task Details -->
+      <div class="task-details">
+        <input type="text" placeholder="Search tasks..." class="search-box" />
+        <h2>Meeting Sagar Dhakal</h2>
+        <p>
+          Meet Sagar dai to discuss about the ranting competition against former PM, Sher Bahadur Deuba.
+          Sagar dai has insights on how to make Sher Baa agitated, which is a weakness of him. If that
+          competition is won by me or any other competitors, Sher Bahadur Deuba has agreed to the banishment
+          of his family from the country. It’s going to be EPIC!!!
+        </p>
+        <p><strong>Location:</strong> Rato Bhaley Restaurant, Babarmahal, Kathmandu</p>
+        <p><strong>Date:</strong> Friday 7 July, 2025</p>
+        <p><strong>Time:</strong> 4:00 PM</p>
+        <p><strong>Priority:</strong> <span class="priority medium">Medium</span></p>
+      </div>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your password" />
+      <!-- Right Panel: Add/Edit Task Form -->
+      <div class="form-panel">
+        <h3>Add / Edit Task</h3>
+        <input type="text" placeholder="Title" class="form-input" />
+        <input type="text" placeholder="Date" class="form-input" />
+        <input type="text" placeholder="Time" class="form-input" />
+        <input type="text" placeholder="Location" class="form-input" />
+        <textarea placeholder="Notes..." class="form-textarea"></textarea>
 
-        <button type="submit">Login</button>
-      </form>
+        <div class="priority-options">
+          <p>Priority:</p>
+          <label><input type="radio" name="priority" /> Low</label>
+          <label><input type="radio" name="priority" checked /> Medium</label>
+          <label><input type="radio" name="priority" /> High</label>
+        </div>
+
+        <button class="submit-btn">Submit</button>
+
+        <div class="user-info">
+          <p><strong>Bishwash Siku Shrestha</strong></p>
+          <p>Premium User</p>
+          <p>Activated till 28th March 2027</p>
+        </div>
+
+        <button class="logout-btn">Log out</button>
+      </div>
     </div>
   </div>
+
+  <script src="script/dashboard.js"></script>
 </body>
 </html>
